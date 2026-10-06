@@ -1,4 +1,5 @@
 const state={tool:'pdf-to-image',files:[],result:null,history:[]};
+if(window.pdfjsLib) window.pdfjsLib.GlobalWorkerOptions.workerSrc='node_modules/pdfjs-dist/build/pdf.worker.min.js';
 const configs={
  'pdf-to-image':{title:'PDF to image',kicker:'PDF TOOL',desc:'Convert every page of a PDF into a high-quality image.',accept:'.pdf,application/pdf',hint:'PDF files up to 50 MB',multiple:false},
  'image-resize':{title:'Resize image',kicker:'IMAGE TOOL',desc:'Change image dimensions and quality in a few clicks.',accept:'image/*',hint:'JPG, PNG, WEBP up to 20 MB',multiple:false},

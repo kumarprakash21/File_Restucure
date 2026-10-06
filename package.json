@@ -1,0 +1,49 @@
+{
+  "name": "fileforge-desktop",
+  "version": "1.0.0",
+  "description": "Private desktop file conversion tools for Windows",
+  "main": "electron-main.js",
+  "author": "FileForge",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --enable-logging",
+    "build": "electron-builder --win nsis portable",
+    "build:installer": "electron-builder --win nsis",
+    "build:portable": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.fileforge.desktop",
+    "productName": "FileForge",
+    "artifactName": "FileForge-${version}-${platform}-${arch}.${ext}",
+    "asar": true,
+    "files": [
+      "index.html",
+      "style.css",
+      "app.js",
+      "electron-main.js",
+      "package.json",
+      "node_modules/pdfjs-dist/**",
+      "node_modules/jspdf/**"
+    ],
+    "win": {
+      "target": ["nsis", "portable"],
+      "publisherName": "FileForge"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FileForge"
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.2",
+    "pdfjs-dist": "3.11.174"
+  }
+}
