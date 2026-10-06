@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FileForge — Simple file tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="FileForge home"><span class="brand-mark">✦</span> FileForge</a>
+    <nav><a href="#tools">Tools</a><a href="#how-it-works">How it works</a></nav>
+    <div class="privacy-pill"><span class="status-dot"></span> Files stay on your device</div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">QUICK FILE UTILITIES</p>
+        <h1>Make files <em>work</em> harder.</h1>
+        <p class="hero-text">Convert, resize, and compress your files in seconds. Everything happens right in your browser.</p>
+        <a class="primary-button" href="#tools">Explore tools <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="file-card card-back"><span>PDF</span><b>↗</b></div>
+        <div class="file-card card-front"><span>JPG</span><b>✦</b></div>
+        <div class="spark spark-a">+</div><div class="spark spark-b">✦</div>
+      </div>
+    </section>
+
+    <section id="tools" class="tools-section">
+      <div class="section-heading"><div><p class="eyebrow">YOUR TOOLKIT</p><h2>Pick a tool, get it done.</h2></div><span class="tool-count">05 tools</span></div>
+      <div class="tool-grid">
+        <button class="tool-card active" data-tool="pdf-to-image"><span class="tool-icon purple">▧</span><span><strong>PDF to image</strong><small>Turn PDF pages into JPGs</small></span><i>→</i></button>
+        <button class="tool-card" data-tool="image-resize"><span class="tool-icon orange">↔</span><span><strong>Resize image</strong><small>Change dimensions & quality</small></span><i>→</i></button>
+        <button class="tool-card" data-tool="pdf-compress"><span class="tool-icon blue">⌁</span><span><strong>Compress PDF</strong><small>Make your PDF lighter</small></span><i>→</i></button>
+        <button class="tool-card" data-tool="image-to-pdf"><span class="tool-icon pink">▤</span><span><strong>Image to PDF</strong><small>Bundle images into one PDF</small></span><i>→</i></button>
+        <button class="tool-card" data-tool="image-compress"><span class="tool-icon green">◌</span><span><strong>Compress image</strong><small>Reduce image file size</small></span><i>→</i></button>
+      </div>
+    </section>
+
+    <section class="workspace" id="workspace">
+      <div class="workspace-head"><div><p class="eyebrow" id="tool-kicker">PDF TOOL</p><h2 id="tool-title">PDF to image</h2><p id="tool-description">Convert every page of a PDF into a high-quality image.</p></div><span class="step-label"><span>01</span> Upload</span></div>
+      <div class="drop-zone" id="drop-zone">
+        <input type="file" id="file-input" hidden />
+        <div class="upload-icon">↑</div><h3>Drop your file here</h3><p>or <button class="browse-button" id="browse-button">browse files</button></p><small id="file-hint">PDF files up to 50 MB</small>
+      </div>
+      <div class="file-list" id="file-list"></div>
+      <div class="options" id="options"></div>
+      <div class="action-row"><button class="convert-button" id="convert-button" disabled>Convert file <span>→</span></button><p class="local-note">◉ 100% local processing</p></div>
+      <div class="result" id="result" aria-live="polite"></div>
+    </section>
+
+    <section id="how-it-works" class="steps"><p class="eyebrow">HOW IT WORKS</p><h2>Three steps. Zero friction.</h2><div class="step-grid"><div><span>01</span><h3>Choose a tool</h3><p>Pick the file utility that matches your task.</p></div><div><span>02</span><h3>Upload your file</h3><p>Drop a file or browse your device. It never leaves.</p></div><div><span>03</span><h3>Download the result</h3><p>Convert, compress, and save your finished file.</p></div></div></section>
+  </main>
+  <footer><span>✦ FileForge</span><span>Made for the files in your day.</span></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
