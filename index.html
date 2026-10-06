@@ -44,15 +44,17 @@
     </section>
 
     <section class="workspace" id="workspace">
-      <div class="workspace-head"><div><p class="eyebrow" id="tool-kicker">PDF TOOL</p><h2 id="tool-title">PDF to image</h2><p id="tool-description">Convert every page of a PDF into a high-quality image.</p></div><span class="step-label"><span>01</span> Upload</span></div>
+      <div class="workspace-head"><div><p class="eyebrow" id="tool-kicker">PDF TOOL</p><h2 id="tool-title">PDF to image</h2><p id="tool-description">Convert every page of a PDF into a high-quality image.</p></div><div class="workspace-actions"><span class="step-label"><span>01</span> Upload</span><button class="text-button" id="clear-button">Clear all</button></div></div>
       <div class="drop-zone" id="drop-zone">
         <input type="file" id="file-input" hidden />
         <div class="upload-icon">↑</div><h3>Drop your file here</h3><p>or <button class="browse-button" id="browse-button">browse files</button></p><small id="file-hint">PDF files up to 50 MB</small>
       </div>
+      <div class="queue-head"><span id="queue-label">Upload queue</span><span id="queue-count">0 files</span></div>
       <div class="file-list" id="file-list"></div>
       <div class="options" id="options"></div>
       <div class="action-row"><button class="convert-button" id="convert-button" disabled>Convert file <span>→</span></button><p class="local-note">◉ 100% local processing</p></div>
       <div class="result" id="result" aria-live="polite"></div>
+      <div class="preview-panel" id="preview-panel"><div class="preview-head"><strong>Live preview</strong><span id="preview-meta">No file selected</span></div><div id="preview-content" class="preview-content"><span>Preview will appear here</span></div></div>
     </section>
 
     <section id="how-it-works" class="steps"><p class="eyebrow">HOW IT WORKS</p><h2>Three steps. Zero friction.</h2><div class="step-grid"><div><span>01</span><h3>Choose a tool</h3><p>Pick the file utility that matches your task.</p></div><div><span>02</span><h3>Upload your file</h3><p>Drop a file or browse your device. It never leaves.</p></div><div><span>03</span><h3>Download the result</h3><p>Convert, compress, and save your finished file.</p></div></div></section>
